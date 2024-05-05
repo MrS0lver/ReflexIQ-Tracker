@@ -2,6 +2,7 @@ from tkinter import *
 import time 
 import threading
 import random as rd
+from guideText import guide_description
 
 class Firstwin:
     def __init__(self, root):
@@ -62,16 +63,7 @@ class Reaction:
         self.guide_win.geometry("600x500")
         self.guide_win.title("Guide")
         Label(self.guide_win,text="How To Use Reaction Time Tester: ", font="Elephant 20",bg="lightgrey").pack(fill=BOTH,side=TOP)
-        texty="""🚦 Welcome to Reaction Time Tester! 🚦\n
-
-To start testing your reaction time, follow these simple steps: \n\n
-
-1: Click the Spacebar: Press the spacebar key on your keyboard to begin the test.\n
-2: Watch the Lights: Keep your eyes on the screen as the lights start blinking one by one,\njust like the start sequence in a Formula One race!\n
-3: React Quickly: As soon as the last light fills up,\n click the spacebar again to stop the test and \nsimulate the quick reaction required in racing.\n
-4: View Your Results: Your reaction time will be displayed on the screen,\nshowing you just how fast you reacted.\n
-
-Ready to test your reflexes? Click the spacebar and see how quick you are! 🏁"""
+        texty = guide_description
         Label(self.guide_win,text=texty,font="consolas 10").pack()
 
 
