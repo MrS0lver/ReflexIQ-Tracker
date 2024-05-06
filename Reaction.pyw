@@ -50,6 +50,7 @@ class Reaction:
 
         self.frame_1 = Frame(self.win, bg = "grey", relief = RIDGE)
         self.frame_1.pack(pady=10)
+
         self.score = Label(self.frame_1)
         self.score.grid(row=0,column=0,pady=10,padx=10) 
 
@@ -58,13 +59,35 @@ class Reaction:
 
         self.win.protocol("WM_DELETE_WINDOW", self.reopen)
 
+    # def guide_window(self):
+    #     self.guide_win = Toplevel(self.win)
+    #     self.guide_win.geometry("600x500")
+    #     self.guide_win.title("Guide")
+    #     Label(self.guide_win,text="How To Use Reaction Time Tester: ", font="Elephant 20",bg="lightgrey").pack(fill=BOTH,side=TOP)
+    #     texty = guide_description
+    #     Label(self.guide_win,text=texty,font="consolas 10").pack()
+    
     def guide_window(self):
         self.guide_win = Toplevel(self.win)
-        self.guide_win.geometry("600x500")
+        self.guide_win.geometry("650x600")
         self.guide_win.title("Guide")
-        Label(self.guide_win,text="How To Use Reaction Time Tester: ", font="Elephant 20",bg="lightgrey").pack(fill=BOTH,side=TOP)
-        texty = guide_description
-        Label(self.guide_win,text=texty,font="consolas 10").pack()
+        
+        # Styling
+        self.guide_win.configure(bg="lightgrey")
+        
+        # Title
+        Label(self.guide_win, text="How To Use Reaction Time Tester", font=("Arial", 20, "bold"), bg="lightgrey").pack(pady=10)
+        
+        # Guide text
+        guide_text = Text(self.guide_win, font=("Arial", 12), wrap=WORD, bg="white", bd=2, relief=RIDGE)
+        guide_text.pack(fill=BOTH, expand=True, padx=20, pady=10)
+        guide_text.insert(END, guide_description)
+        guide_text.config(state=DISABLED)  # Make the text read-only
+        
+        # Close button
+        close_button = Button(self.guide_win, text="Close", font=("Arial", 12), bg="lightblue", command=self.guide_win.destroy)
+        close_button.pack(pady=10)
+
 
 
 
