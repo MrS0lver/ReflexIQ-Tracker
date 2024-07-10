@@ -99,7 +99,8 @@ class Reaction:
             
             if self.attempts == 5:
                 average_time = reduce(lambda x,y: x+y,self.records)/5
-                print(f"Average Reaction Time: {average_time} milliseconds")
+                print(f"Average Reaction Time: {int(average_time)} milliseconds")
+                self.score.config(text=f"Your Average Reflex is {int(average_time)} milliseconds", font="consolas 16", bg="red",fg="white")
 
         except Exception as e:
             print(f"Exception occurred: {e}")
