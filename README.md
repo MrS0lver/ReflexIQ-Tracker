@@ -1,18 +1,17 @@
-# ReflexIQ-Tracker
+# Reaction Time Tester 🏎️⏱️
 
-## Installation
+## Overview
+This application measures your reaction time using a visual stimulus similar to a Formula One race start sequence. It prompts you to press Enter quickly after a series of lights turn off to measure your reaction time in milliseconds.
 
--  Clone this repo to get the script loally.
+## Features 🚀
+- **Start Test**: Initiate the test by pressing the spacebar.
+- **Visual Stimulus**: Simulates a sequence of lights turning on and off.
+- **Real-time Measurement**: Measures and displays reaction time in milliseconds.
+- **Average Reaction Time**: Calculates and displays average reaction time after 5 attempts.
+- **Guide Included**: Comprehensive guide available for effective usage.
 
-```git clone git@github.com:MrS0lver/ReflexIQ-Tracker.git```
-
--  Make sure you have python3 installed before hand to make sure everything runs smoothly. Goto https://python.org to download.
-
-- Run the application.
-
-```python Reaction.pyw```
-
-### Licence
-
-This project is open source under MIT license.
-
+## Installation 🛠️
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/Reaction-Time-Tester.git
+   cd Reaction-Time-Tester
